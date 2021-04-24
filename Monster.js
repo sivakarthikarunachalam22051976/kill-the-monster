@@ -10,7 +10,7 @@ class Monster {
     this.y = y;
     this.r = r;
     this.body = Bodies.circle(this.x, this.y, this.r, options);
-    this.image = loadImage("Monster1.png");
+    this.image = loadImage("monster.png");
     World.add(world, this.body);
   }
 
