@@ -7,7 +7,7 @@ var engine, world;
 var box1;
 
 function preload(){
-    backgroundImg = loadImage("GamingBackground2.png")
+    backgroundImg = loadImage("GamingBackground1.jpg")
 }
 
 function setup(){
