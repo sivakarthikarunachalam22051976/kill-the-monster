@@ -7,14 +7,14 @@ var engine, world;
 var box1;
 
 function preload(){
-    backgroundImg = loadImage("gamingbackground1.jpg")
+    backgroundImg = loadImage("GamingBackground.png")
 }
 
 function setup(){
     var canvas = createCanvas(1515, 725);
     engine = Engine.create();
     world = engine.world;
-      //displaying the boxes
+
     box1 = new Box(800,100,70,70);
     box2 = new Box(800,100,70,70);
     box3 = new Box(800,100,70,70);
@@ -39,13 +39,13 @@ function setup(){
     box20 = new Box(600, 100, 70, 70);
 
     
-        //creating ground
+
     ground = new Ground(0, 600, width+width/2+90, 25);
-       //creating monster
+
     monster = new Monster(1100, 500, 200)
-       //creating hero
+
     ball = new Hero(200, 200, 80);
-       //creating rope
+
     rope = new Rope(ball.body, {x:300, y:50})
 }
 
@@ -72,21 +72,19 @@ function draw(){
     box18.display();
     box19.display();
     box20.display();
-    //displaying the ball
     ball.display();
 
     monster.display();
-    //displaying the ground
+
     ground.display();
 
     fill(37, 247, 58);
     stroke("black")
-    strokeWeight(2);//You can use the code given  to hide the fly rope.
+    strokeWeight(2);
     textSize(50)
     text("KILL THE MONSTER", 500, 700)
 }
 
 function mouseDragged(){
     Matter.Body.setPosition(ball.body, {x:mouseX, y:mouseY})
-    //this is used to the code given below to drag hero using the mouse.
 }
